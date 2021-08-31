@@ -28,3 +28,31 @@ getUserData({}); // 'Your name is undefined and you like green'
 
 // ARRAY DESTRUCTURING
 //
+let [first, second, third] = ['Maya', 'Marisa', 'Chi'];
+
+console.log(first); // Maya
+console.log(second); // Marissa
+console.log(third); // Chi
+
+//
+let [raindrops, whiskers, ...aFewOfMyFavoriteThings] = [
+  'Raindrops on roses',
+  'whiskers on kittens',
+  'Bright copper kettles',
+  'warm woolen mittens',
+  'Brown paper packages tied up with strings'
+];
+
+console.log(raindrops); // Raindrops on roses
+console.log(whiskers); // whiskers on kittens
+
+console.log(aFewOfMyFavoriteThings); // ['Bright copper kettles', 'warm woolen mittens', 'Brown paper packages tied up with strings']
+
+//
+let numbers = [10, 20, 30];
+[numbers[1], numbers[2]] = [numbers[2], numbers[1]];
+
+console.log(numbers); // [10, 30, 20]
+
+//ES2015 REFACTORING
+//
