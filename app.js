@@ -56,3 +56,35 @@ console.log(numbers); // [10, 30, 20]
 
 //ES2015 REFACTORING
 //
+const obj = {
+  numbers: {
+    a: 1,
+    b: 2
+  }
+};
+
+const { a, b } = obj.numbers;
+
+//
+const arr = [1, 2];
+
+[arr[0], arr[1]] = [arr[1], arr[0]];
+
+//
+// first attempt, not using ES2015
+function raceResults(arr) {
+  return {
+    first: arr[0],
+    second: arr[1],
+    third: arr[2],
+    rest: [arr.slice(3)]
+  };
+}
+
+// using ES2015
+const raceResults = ([first, second, third, ...rest]) => ({
+  first,
+  second,
+  third,
+  rest
+});
